@@ -1,4 +1,4 @@
-# proyecto programacion II
+# Proyecto Programacion II
 # Tema 2: Pizarra/Editor de diagrama UML
 
 

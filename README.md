@@ -1,6 +1,10 @@
 # Proyecto Programacion II
 # Tema 2: Pizarra/Editor de diagrama UML
 
+Grupo nro 11:
+- José Alarcón R.
+- Ingrid Trviño S.
+
 
 Enunciado:
 

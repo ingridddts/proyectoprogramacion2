@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Dibujos;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -10,12 +7,17 @@ import java.awt.Graphics2D;
 import java.awt.Stroke;
 
 /**
- * Main UML Line
- * @author nwroot
+ * "dibujar" una linea
+ * @param x1 entero que indica posicion inicial en eje x
+ * @param x2 entero que indica posicion final en eje x
+ * @param y1 entero que indica posicion inicial eje y 
+ * @param y2 entero que indica posicion inicial eje y 
+ * @param d tamaño flecha
+ * @param h altura flecha
+ * @param fill triangulo en el destino
+ * @param dotted linea punteada
  */
-
 public class DrawableLine implements Drawable {
-
     /**
      * Origin X
      */
@@ -37,9 +39,9 @@ public class DrawableLine implements Drawable {
     y2;
 
     /**
-     * Set the destination
-     * @param x
-     * @param y
+     * posicion destino
+     * @param x posicion eje x
+     * @param y posisicion eje y
      */
     @Override
     public void update_from_pos(int x, int y) {
@@ -48,9 +50,9 @@ public class DrawableLine implements Drawable {
     }
 
     /**
-     * Set the origin
-     * @param x
-     * @param y
+     * posicion inicial
+     * @param x posicion eje x
+     * @param y posicion eje y
      */
     @Override
     public void set_origin(int x, int y) {
@@ -61,7 +63,7 @@ public class DrawableLine implements Drawable {
     }
 
     /**
-     * Set the line color. Unused
+     * color de la linea
      * @param color
      */
     @Override
@@ -69,7 +71,7 @@ public class DrawableLine implements Drawable {
     }
 
     /**
-     * Get the line color. Unused
+     * obetener el color
      * @return
      */
     @Override
@@ -78,7 +80,7 @@ public class DrawableLine implements Drawable {
     }
 
     /**
-     * Paint a simple line
+     * dibujar linea
      * @param g
      */
     @Override
@@ -86,18 +88,6 @@ public class DrawableLine implements Drawable {
         g.drawLine(x1, y1, x2, y2);
     }
 
-    /**
-     * Draw UML line with an arrow
-     * @param g Graphics
-     * @param x1 Origin X
-     * @param y1 Origin Y
-     * @param x2 Destination X
-     * @param y2 Destination Y
-     * @param d Arrow size
-     * @param h Arrow width
-     * @param fill Make a full triangle at the destination
-     * @param dotted Make a dotted line
-     */
     protected void drawArrowLine(Graphics g, int x1, int y1, int x2, int y2, int d, int h, boolean fill, boolean dotted) {
         int dx = x2 - x1, dy = y2 - y1;
         double D = Math.sqrt(dx * dx + dy * dy);

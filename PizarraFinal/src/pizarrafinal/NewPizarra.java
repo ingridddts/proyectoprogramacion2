@@ -6,11 +6,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 
-
+/**
+* Crear nueva pizarra y asignarle titulo/nombre
+* @param name titulo pizarra
+*/
 public class NewPizarra extends JFrame {
     private String name;
 
-    
+    /**
+    * Constructor
+    * se despliega cuadro de texto para ingresar nombre
+    */
     public NewPizarra(JFrame frame, PizarraContainer cont){
         this.setTitle("Nombre de Pizarra");
         this.setPreferredSize(new Dimension(300, 100));
@@ -42,14 +48,12 @@ public class NewPizarra extends JFrame {
             }
         });
         
-        
-        
         this.setVisible(true);
     }
 
     /**
-     * Getter for name
-     * @return name
+     * Obtener nombre pizarra
+     * @return name nombre ingresado para pizarra
      */
     @Override
     public String getName(){

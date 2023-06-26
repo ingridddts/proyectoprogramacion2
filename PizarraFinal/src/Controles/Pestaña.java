@@ -8,22 +8,18 @@ import javax.swing.event.ChangeListener;
 import pizarrafinal.Pizarra;
 
 /**
- *
- * @author nwroot
+ * crear/manejar ventana
+ * @param index indice pestaña actual
+ * @param auxP variable temporal para almacenar pizarra
  */
 public class Pestaña extends JTabbedPane{
-    
     private static ArrayList<Pizarra> pizarras;
     private ArrayList<String> names;
-
-    /**
-     * Index for current pestana
-     */
     public static int index;
     private static Pizarra auxP;
 
     /**
-     * Create a pestana manager
+     * crear ventana
      * @throws IOException
      */
     public Pestaña() throws IOException{
@@ -34,8 +30,8 @@ public class Pestaña extends JTabbedPane{
     }
     
     /**
-     * Add a new Pizarra
-     * @param name Name for the new pizarra
+     * Agregar nueva Pizarra
+     * @param name nombre pizarra
      * @throws IOException
      */
     public void AddPizarra(String name) throws IOException{
@@ -46,8 +42,8 @@ public class Pestaña extends JTabbedPane{
     }
     
     /**
-     * Delete a Pizarra
-     * @param ind Index to delete
+     * Borrar pizarra
+     * @param ind indice a borrar
      */
     public void DeletePizarra(int ind){
         this.remove(ind);
@@ -55,25 +51,26 @@ public class Pestaña extends JTabbedPane{
         names.remove(ind);
     }
     
-    /**
-     * Get the current index
-     * @return The index
+     /**
+     * obtener index ventana actual
+     * @return index
      */
     public int getIndex(){
         return index;
     }
     
     /**
-     * Get i'th Pizarra
-     * @param i
-     * @return
+     * obtener pizarra
+     * @param i indice pizarra
+     * @return la pizarra
      */
     public Pizarra getPizarra(int i){
         return pizarras.get(i);                
     }
     
-    /**
-     * Undo an action
+     /**
+     * volver hacia atras
+     * @auxP variable temporal para guardar pizarra
      */
     public static void undo(){        
         auxP = pizarras.get(index);
@@ -81,15 +78,16 @@ public class Pestaña extends JTabbedPane{
     }
     
     /**
-     * Redo an action
+     * Rehacer accion
      */
+
     public static void redo(){        
         auxP = pizarras.get(index);
         auxP.restore();
     }
     
     /**
-     * Clear the screen
+     * limpiar pizarra
      */
     public static void clear(){
         auxP = pizarras.get(index);

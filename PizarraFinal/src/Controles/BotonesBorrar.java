@@ -4,8 +4,10 @@ import javax.swing.*;
 import pizarrafinal.*;
 
 /**
- *
- * @author nwroot
+ * crear los botones para borrar
+ * @param object akmacena info Jbutton 
+ * @param all almacena info del Jbutton borrar
+ * @param borrar contiene 
  */
 public class BotonesBorrar extends JPanel{
     
@@ -14,8 +16,7 @@ public class BotonesBorrar extends JPanel{
     private Borrar borrar;
     
     /**
-     * Creates a BotonesBorrar
-     * @param b
+     * constructor BotonesBorrar
      */
     public BotonesBorrar(Borrar b){
         
@@ -43,7 +44,7 @@ public class BotonesBorrar extends JPanel{
     }
     
     /**
-     * Set the color to gray
+     * cambia el color de fondo a gris
      */
     public void setColor(){
     

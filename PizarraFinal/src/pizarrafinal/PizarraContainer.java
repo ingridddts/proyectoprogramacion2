@@ -5,14 +5,17 @@ import java.io.IOException;
 import javax.swing.*;
 
 //algo falta hacer para los textos
+ /**
+* Crear un PizarraContainer
+* @throws IOException
+*/
 public class PizarraContainer extends JPanel {
     private Pestaña pestaña;
 
     /**
-     * Creates a PizarraContainer
+     * Constructor
      * @throws IOException
      */
-
     public PizarraContainer() throws IOException{
         this.setLayout(new BorderLayout());
         pestaña = new Pestaña();
@@ -21,13 +24,12 @@ public class PizarraContainer extends JPanel {
     }
     
     /**
-     * Getter for pestana
-     * @return pestana
+     * Obetener ventana actual
+     * @return ventana
      */
     public Pestaña getPestaña(){
         return pestaña;
     }
 
-    
-    }
+}
 

@@ -19,19 +19,18 @@ import javax.swing.event.MouseInputAdapter;
 
 
 public class Pizarra extends JPanel {
-
     private static int mode = 1;
     private static Color color;
 
     /**
-     * Save buffer for undo/redo
+     * Guardar búfer para deshacer/rehacer
      */
     public static ArrayList<Drawable> save;
     private ArrayList<Drawable> drawn;
     private Drawable curr;
 
     /**
-     * Creates a Pizarra
+     * Crear pizarra
      * @throws IOException
      */
     public Pizarra() throws IOException {
@@ -45,12 +44,12 @@ public class Pizarra extends JPanel {
         this.addMouseMotionListener(listener);
     }
 
+    /**
+     * Acciones con el mouse
+     */
     class Listener extends MouseInputAdapter {
-
         @Override
-
         public void mousePressed(MouseEvent m) {
-
             if (mode == 1) {
                 curr = new DrawableOval  ();
             }
@@ -101,7 +100,7 @@ public class Pizarra extends JPanel {
     }
 
     /**
-     * Paint the Pizarra
+     * Dibujar en la pizarra
      * @param g Swing graphics
      */
     @Override
@@ -117,15 +116,15 @@ public class Pizarra extends JPanel {
     }
 
     /**
-     * Setter for mode
-     * @param m mode
+     * seleccionar el modo
+     * @param m modo
      */
     public static void setMode(int m) {
         mode = m;
     }
 
     /**
-     * Setter for color
+     * Seleccionar color
      * @param c color
      */
     public static void setColor(Color c) {
@@ -133,6 +132,7 @@ public class Pizarra extends JPanel {
     }
 
     /**
+    * borrar
      */
     public void remove() {
         if (!drawn.isEmpty()) {
@@ -145,6 +145,7 @@ public class Pizarra extends JPanel {
     }
 
     /**
+    * deshacer
      */
     public void restore() {
         if (!save.isEmpty()) {
@@ -159,6 +160,7 @@ public class Pizarra extends JPanel {
     }
 
     /**
+    * limpiar
      */
     public void clear() {
         drawn.clear();

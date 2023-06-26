@@ -8,11 +8,14 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 /**
- * UML class, drawn as a rounded rectangle
- * @author nwroot
+ * "dibujar" un ovalo UML con color de fondo, seleccionar y arrastrar a la pizarra
+ * @param x entero que indica posicion eje x
+ * @param y entero que indica posicion eje y 
+ * @param w indica el ancho del ovalo 
+ * @param h indica la altura del ovalo
+ * @param color indica color seleccionado
  */
 public class Ovalrelleno implements Drawable {
-
     private int x;
     private int y;
     private int w;
@@ -20,7 +23,7 @@ public class Ovalrelleno implements Drawable {
     private Color color;
     
     /**
-     * Paint to the screen
+     * Dibuja en la pizarra
      * @param g
      */
     @Override
@@ -30,9 +33,9 @@ public class Ovalrelleno implements Drawable {
     }
 
     /**
-     * Set the bottom right corner
-     * @param x
-     * @param y
+     * esquina inferior derecha
+     * @param x posicion en eje x
+     * @param y posicion en eje y
      */
     @Override
     public void update_from_pos(int x, int y) {
@@ -41,9 +44,9 @@ public class Ovalrelleno implements Drawable {
     }
 
     /**
-     * Set the top left corner
-     * @param x
-     * @param y
+     * esquina superior izquierda
+     * @param x posicion en eje x
+     * @param y posicion en eje y
      */
     @Override
     public void set_origin(int x, int y) {
@@ -52,8 +55,8 @@ public class Ovalrelleno implements Drawable {
     }
 
     /**
-     * Set the color. Unused
-     * @param color
+     * Seleccionar color
+     * @param color almacena color elegido
      */
     @Override
     public void set_color(Color color) {    
@@ -61,8 +64,8 @@ public class Ovalrelleno implements Drawable {
     }
 
     /**
-     * Get the color. Unused
-     * @return
+     * Obitene color seleccionado
+     * @return color
      */
     @Override
     public Color get_color() {

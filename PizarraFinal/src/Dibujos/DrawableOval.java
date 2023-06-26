@@ -1,15 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Dibujos;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-
+/**
+ * "dibujar" un ovalo
+ * @param x entero que indica posicion eje x figura
+ * @param y entero que indica posicion eje y figura
+ * @param w indica ancho figura
+ * @param h indica alto de la figura
+ * @param color indica el color de la figura
+ */
 public class DrawableOval implements Drawable {
-
     private int x;
     private int y;
     private int w;
@@ -17,8 +19,8 @@ public class DrawableOval implements Drawable {
     private Color color;
     
     /**
-     * Paint to the screen
-     * @param g
+     * Dibujar en la pizarra
+     * @param g 
      */
     @Override
     public void paint(Graphics g) {
@@ -27,9 +29,9 @@ public class DrawableOval implements Drawable {
     }
 
     /**
-     * Set the bottom right corner
-     * @param x
-     * @param y
+     * esquina superior derecha
+     * @param x posicion eje x
+     * @param y posicion eje y
      */
     @Override
     public void update_from_pos(int x, int y) {
@@ -38,9 +40,9 @@ public class DrawableOval implements Drawable {
     }
 
     /**
-     * Set the top left corner
-     * @param x
-     * @param y
+     * esquina izquierda superior
+     * @param x posicion en eje x
+     * @param y posisicion en eje y
      */
     @Override
     public void set_origin(int x, int y) {
@@ -49,7 +51,7 @@ public class DrawableOval implements Drawable {
     }
 
     /**
-     * Set the color. Unused
+     * escoger color
      * @param color
      */
     @Override
@@ -58,7 +60,7 @@ public class DrawableOval implements Drawable {
     }
 
     /**
-     * Get the color. Unused
+     * obtener color
      * @return
      */
     @Override

@@ -5,10 +5,19 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import pizarrafinal.*;
 
-
-
+/**
+ * Panel para crear botones de edicion 
+ * @param ovalo boton para seleccionar entidad UML
+ * @param flecha boton para crear flecha
+ * @param comp boton para crear
+ * @param gene boton para crear linea generalizacion
+ * @param depe boton para crear linea dependencia
+ * @param undo boton para volver atras
+ * @param redo boton paara 
+ * @param editar boton editar}
+ * @param ova
+ */
 public class BotonesEditar {
-    
     private JButton ovalo;
     private JButton flecha;    
     private JButton comp;
@@ -20,11 +29,11 @@ public class BotonesEditar {
     private Editar editar;
     private JButton ova;
     
-
+    /*
+    *constructor
+    */
     public BotonesEditar(Editar b, PizarraContainer p){
-        
         editar = b;                                
-             
             
         ovalo = new JButton();
         ovalo.setFocusable(false);

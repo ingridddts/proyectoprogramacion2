@@ -17,7 +17,11 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputAdapter;
 
-
+/**
+* Crear pizarra y desplegar todas las opciones 
+* @param color 
+* @param mode
+*/
 public class Pizarra extends JPanel {
     private static int mode = 1;
     private static Color color;

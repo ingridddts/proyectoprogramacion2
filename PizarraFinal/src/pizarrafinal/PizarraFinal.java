@@ -4,13 +4,12 @@ package pizarrafinal;
 import java.io.IOException;
 
 /**
- *
- * @author nwroot
+ *Método principal
+ *llamado para comenzar
  */
 public class PizarraFinal {    
 
     /**
-     * Main method. Called at start
      * @param args Command line arguments
      * @throws IOException
      */

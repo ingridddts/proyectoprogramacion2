@@ -6,12 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+/**
+* 
+* @param botones
+*/
 public class Borrar extends JPanel{
-    
     BotonesBorrar botones;
 
     public Borrar(){
-        
         this.setBounds(50, 20, 100, 100);
         this.setPreferredSize(new Dimension(180, 300));
         this.setBackground(Color.LIGHT_GRAY);

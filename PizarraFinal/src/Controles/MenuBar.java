@@ -11,9 +11,16 @@ import pizarrafinal.NewPizarra;
 import pizarrafinal.Pizarra;
 import pizarrafinal.PizarraContainer;
 
-
+/**
+ * Panel para crear botones barra izquierda
+ * @param mb
+ * @param load
+ * @param delete
+ * @param file
+ * @param addW
+ * @param wind
+ */
 public class MenuBar extends JMenuBar {
-    
     private JMenuBar mb;
     private JMenuItem load;
    // private JMenuItem save;
@@ -24,10 +31,8 @@ public class MenuBar extends JMenuBar {
  
    
     public MenuBar(JFrame w, PizarraContainer cont){
-        
         w.setLayout(null);
         
-
         wind = w;
         mb = new JMenuBar();
         load = new JMenu("Cargar");

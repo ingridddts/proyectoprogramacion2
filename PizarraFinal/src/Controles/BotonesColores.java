@@ -5,8 +5,14 @@ import javax.swing.border.LineBorder;
 import pizarrafinal.*;
 
 /**
- * 
- * @author nwroot
+ * Panel para crear botones de seleccion de color a traves del mousse
+ * @param redButton boton para seleccionar color rojo
+ * @param magentaButton boton para seleccionar color magenta
+ * @param yellowButton boton para seleccionar color amarillo
+ * @param blueButton boton para seleccionar color azul
+ * @param blackButton boton para seleccionar color negro
+ * @param orangeButton boton para seleccionar color naranjo
+ * @param color contiene color seleccionado
  */
 public class BotonesColores extends JPanel{
 
@@ -20,13 +26,12 @@ public class BotonesColores extends JPanel{
     private Colores color;
     private LineBorder gBorder;
     private LineBorder lBorder;
-    
+   
     /**
-     * Create a BotonesColores
-     * @param c Parent Colores
+     * Constructor
+     * @param color alamcena color principal
      */
     public BotonesColores(Colores c){
-        
         color = c;        
         
         gBorder = new LineBorder(Color.GREEN);
@@ -135,7 +140,7 @@ public class BotonesColores extends JPanel{
     }
     
     /**
-     * Clear the colors
+     * limpiar colores
      */
     public void cleanColor(){
         

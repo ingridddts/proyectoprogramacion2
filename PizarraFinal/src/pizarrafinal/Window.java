@@ -9,15 +9,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
- *
- * @author nwroot
+ * Crear ventana principal
  */
 public class Window extends JFrame {
     private PizarraContainer pizarracont;
     private Barra barra;
    
     /**
-     * Creates the main window
+     * Constructor
      * @throws IOException
      */
     
@@ -44,7 +43,7 @@ public class Window extends JFrame {
     }
 
     /**
-     * Getter for PizarraContainer
+     * obtener PizarraContainer
      * @return PizarraContainer
      */
     public PizarraContainer getPiz(){

@@ -5,24 +5,23 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- *
- * @author nwroot
+ * Crear Barra de opciones
+ * @param barraEditar
+ * @param barraBorrar
+ * @param barraColores
  */
 public class Barra extends JPanel{
-    
     Editar barraEditar;
     Borrar barraBorrar;
     Colores barraColores;
     
-
     /**
-     * Constructor for Barra 
+     * Constructor
      * @param window_aux
      * @param p
      */
     public Barra(Window window_aux, PizarraContainer p){
         
-
         this.setPreferredSize(new Dimension(480, 450));
         this.setBackground(Color.getHSBColor(10, 50, 100));
                 
@@ -37,23 +36,19 @@ public class Barra extends JPanel{
         this.add(barraColores, BorderLayout.SOUTH);
                         
         barraEditar.setVisible(true);
-        barraBorrar.setVisible(false);
-                                         
-      
+        barraBorrar.setVisible(false);   
     }
 
     /**
-     * Getter for BarraBorrar
+     * Obtener BarraBorrar
      * @return barraBorrar
      */
-
-    
     public Borrar getBorrar(){
         return barraBorrar;
     }
 
     /**
-     * Getter for BarraEditar
+     * Obtener BarraEditar
      * @return barraEditar
      */
     public Editar getEditar(){

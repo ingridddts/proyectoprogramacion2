@@ -6,13 +6,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-
+/**
+* Crear botones para seleccionar colores 
+* @param botones 
+*/
 public class Colores extends JPanel {
-    
     private BotonesColores botones;
     
     /**
-     * Constructor de Colores
+     * Constructor
      */
     public Colores() {
         this.setPreferredSize(new Dimension(180, 300));
@@ -23,8 +25,8 @@ public class Colores extends JPanel {
     }
     
     /**
-     * Obtener el objeto BotonesColores
-     * @return El objeto BotonesColores
+     * Obtener objeto BotonesColores
+     * @return objeto BotonesColores
      */
     public BotonesColores getBotones() {
         return botones;

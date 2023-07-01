@@ -10,7 +10,6 @@ import pizarrafinal.*;
  * @param borrar contiene 
  */
 public class BotonesBorrar extends JPanel{
-    
     private JButton object;    
     private JButton all;
     private Borrar borrar;
@@ -19,9 +18,7 @@ public class BotonesBorrar extends JPanel{
      * constructor BotonesBorrar
      */
     public BotonesBorrar(Borrar b){
-        
         borrar = b;                
-        
         
         all = new JButton();
         all.setFocusable(false);
@@ -39,7 +36,6 @@ public class BotonesBorrar extends JPanel{
             }
         });
         
-    
         borrar.add(all);
     }
     
@@ -47,9 +43,6 @@ public class BotonesBorrar extends JPanel{
      * cambia el color de fondo a gris
      */
     public void setColor(){
-    
         all.setBackground(Color.GRAY);
-             
-        
     }
 }

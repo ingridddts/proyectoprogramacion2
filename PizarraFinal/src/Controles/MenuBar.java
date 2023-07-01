@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
-//import pizarraproject.ImageSaver;
 import pizarrafinal.NewPizarra;
 import pizarrafinal.Pizarra;
 import pizarrafinal.PizarraContainer;
@@ -23,22 +22,19 @@ import pizarrafinal.PizarraContainer;
 public class MenuBar extends JMenuBar {
     private JMenuBar mb;
     private JMenuItem load;
-   // private JMenuItem save;
+    private JMenuItem save;
     private JMenuItem delete;
     private JMenu file;
     private JMenu addW;
     private JFrame wind;    
- 
    
     public MenuBar(JFrame w, PizarraContainer cont){
         w.setLayout(null);
-        
         wind = w;
         mb = new JMenuBar();
         load = new JMenu("Cargar");
-       // save = new JMenu("Guardar");
+        save = new JMenu("Guardar");
         delete = new JMenu("Borrar Pizarra Actual");
-        
         addW = new JMenu("Nueva Pizarra");
         
         addW.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -49,8 +45,6 @@ public class MenuBar extends JMenuBar {
             }
         });
         
-        
-        /*
         load.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,7 +84,7 @@ public class MenuBar extends JMenuBar {
         
         mb.add(load);
         mb.add(addW);
-        //mb.add(save);
+        mb.add(save);
         mb.add(delete);
         
     }

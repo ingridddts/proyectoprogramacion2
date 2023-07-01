@@ -1,6 +1,5 @@
 package Controles;
 import java.io.IOException;
-import pizarraproject.*;
 import javax.swing.*;
 import java.util.*;
 import javax.swing.event.ChangeEvent;
@@ -19,7 +18,7 @@ public class Pestaña extends JTabbedPane{
     private static Pizarra auxP;
 
     /**
-     * crear ventana
+     * crear ventana constructor
      * @throws IOException
      */
     public Pestaña() throws IOException{
@@ -80,7 +79,6 @@ public class Pestaña extends JTabbedPane{
     /**
      * Rehacer accion
      */
-
     public static void redo(){        
         auxP = pizarras.get(index);
         auxP.restore();
@@ -101,6 +99,5 @@ public class Pestaña extends JTabbedPane{
         System.out.println("Tab changed to: " + sourceTabbedPane.getTitleAt(index));
       }
     };
-    
-    
+      
 }

@@ -14,7 +14,7 @@ import pizarrafinal.*;
  * @param depe boton para crear linea dependencia
  * @param undo boton para volver atras
  * @param redo boton paara 
- * @param editar boton editar}
+ * @param editar boton editar
  * @param ova
  */
 public class BotonesEditar {
@@ -23,7 +23,7 @@ public class BotonesEditar {
     private JButton comp;
     private JButton gene;
     private JButton depe;
-   // private JButton text;
+    private JButton text;
     private JButton undo;
     private JButton redo;
     private Editar editar;
@@ -84,7 +84,6 @@ public class BotonesEditar {
             }
         });
         
-        
         comp = new JButton();
         comp.setFocusable(false);
         comp.setBounds(120,10,50,50);
@@ -135,7 +134,7 @@ public class BotonesEditar {
                 Pizarra.setMode(6);
             }
         });
-        /*
+        //boton para agregar texto
         text = new JButton();
         text.setFocusable(false);
         text.setBounds(120,70,50,50);
@@ -151,7 +150,8 @@ public class BotonesEditar {
                setColor();
                text.setBackground(Color.GREEN);               
             }
-        });*/
+        });
+        //boton para agregar texto-------
       
         undo = new JButton();
         undo.setFocusable(false);

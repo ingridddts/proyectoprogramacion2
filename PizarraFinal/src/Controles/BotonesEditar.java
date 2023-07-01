@@ -137,7 +137,7 @@ public class BotonesEditar {
         //boton para agregar texto
         text = new JButton();
         text.setFocusable(false);
-        text.setBounds(120,70,50,50);
+        text.setBounds(120,130,50,50);
         text.setBackground(Color.GRAY);
         ImageIcon TIcon = new ImageIcon("text.png");
         text.setIcon(TIcon);
@@ -192,8 +192,7 @@ public class BotonesEditar {
         editar.add(comp);
         editar.add(gene);
         editar.add(depe);
-//        editar.add(text); 
-   
+        editar.add(text); 
         editar.add(undo);
         editar.add(redo);
         editar.add(ova);
@@ -209,7 +208,7 @@ public class BotonesEditar {
         comp.setBackground(Color.GRAY);
         depe.setBackground(Color.GRAY);
         gene.setBackground(Color.GRAY);
-     //   text.setBackground(Color.GRAY);
+        text.setBackground(Color.GRAY);
       
         undo.setBackground(Color.GRAY);
         redo.setBackground(Color.GRAY);

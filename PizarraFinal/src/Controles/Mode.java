@@ -1,21 +1,18 @@
-
 package Controles;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
 import javax.swing.JButton;
 import pizarrafinal.Barra;
-import pizarraproject.*;
 
 /**
- *
- * @author nwroot
+ * Crear un modo
+ * @param editar boton para editar
+ * @param borrar boton borrar
  */
 public class Mode extends JButton{
-    
     JButton editar;
     JButton borrar;
     Barra barra;
@@ -23,12 +20,10 @@ public class Mode extends JButton{
     JPanel sPanel;
     
     /**
-     * Create a Mode
      * @param barraAux
      */
     public Mode(Barra barraAux){
         barra = barraAux;
-        
         auxPanel = new JPanel();
         sPanel = new JPanel();
         
@@ -39,7 +34,6 @@ public class Mode extends JButton{
         sPanel.setPreferredSize(new Dimension(0,100));
         sPanel.setBackground(Color.LIGHT_GRAY);
         
-                
         editar = new JButton("Herramientas");
         editar.setBackground(Color.GREEN);
         editar.setPreferredSize(new Dimension(280,40));     
@@ -48,7 +42,6 @@ public class Mode extends JButton{
         editar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-               
                 editar.setBackground(Color.GREEN);
                 borrar.setBackground(Color.gray);
                 barra.getBorrar().setVisible(true);
@@ -62,13 +55,11 @@ public class Mode extends JButton{
         borrar = new JButton("Borrar");
         borrar.setBackground(Color.gray);
         borrar.setPreferredSize(new Dimension(180,40));
-
         borrar.setFocusable(false);
 
         borrar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-               
                 borrar.setBackground(Color.GREEN);
                 editar.setBackground(Color.GRAY);
                 barra.getBorrar().setVisible(true);
@@ -78,7 +69,6 @@ public class Mode extends JButton{
         });
          
         barra.add(borrar, BorderLayout.EAST);
-        
         barra.add(sPanel,BorderLayout.SOUTH);
     }
 

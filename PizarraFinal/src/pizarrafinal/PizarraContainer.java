@@ -10,6 +10,7 @@ import javax.swing.*;
 * @throws IOException
 */
 public class PizarraContainer extends JPanel {
+    private contenedorTexto textos;
     private Pestaña pestaña;
 
     /**
@@ -30,6 +31,11 @@ public class PizarraContainer extends JPanel {
     public Pestaña getPestaña(){
         return pestaña;
     }
+
+    public contenedorTexto getTextos(){
+        return textos;
+    }
+    
 
 }
 
